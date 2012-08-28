@@ -1,6 +1,9 @@
 package com.xmw;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.ServletOutputStream;
 
@@ -20,10 +23,21 @@ public class HelloWorld extends AppAction {
 	
 	public void sayHello() throws IOException{
 		SqlSessionTemplate sqlSession = getSqlSession();
-		System.out.println(sqlSession);
-		sqlSession.selectList("example.getVoucherNo");
+		ArrayList<Object> list = (ArrayList<Object>)sqlSession.selectList("example.getVoucherNo");
+		
+		System.out.println(list.size());
+		
 		ServletOutputStream os = getResponse().getOutputStream();
-		os.print(name);
+		os.print("<html><head></head><body>");
+		for(int i=0;i<list.size();i++){
+			
+			@SuppressWarnings("unchecked")
+			HashMap<String, String> map = (HashMap<String, String>)list.get(0);
+			name = (String)map.get("V_KEY");
+			os.print(name+"<br/>");
+			
+		}
+		os.print("</body></html>");
 		os.flush();
 		os.close();
 	}

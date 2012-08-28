@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="example">
-	<select id="getVoucherNo" resultType="int">
-		select V_KEY from t_voucher_instance where id=27
+	<select id="getVoucherNo" resultType="java.util.HashMap">
+		select * from t_voucher_instance;
 	</select>
 </mapper>

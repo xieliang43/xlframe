@@ -7,7 +7,6 @@
 
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="false" />
-    <!-- <constant name="struts.objectFactory" value="spring"/> -->
 
     <package name="default" namespace="/" extends="struts-default">
     
@@ -21,8 +20,5 @@
 	
 	</package>
 
-    <include file="struts-example.xml"/>
-
-    <!-- Add packages here -->
-
+    <include file="struts-mobile.xml"/>
 </struts>
