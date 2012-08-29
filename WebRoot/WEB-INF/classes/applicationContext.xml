@@ -11,7 +11,7 @@
 
 		<property name="autoCommitOnClose" value="true" />
 		<property name="initialPoolSize" value="3"/>
-		<property name="minPoolSize" value="5"/>
+		<property name="minPoolSize" value="3"/>
 		<property name="maxPoolSize" value="100"/>
 		<property name="maxIdleTime" value="30"/>
 		<property name="maxIdleTimeExcessConnections" value="30"/>
