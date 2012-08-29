@@ -1,4 +1,4 @@
-package com.xmw;
+package com.xmw.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +14,8 @@ import com.opensymphony.xwork2.ActionSupport;
 public class AppAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
+	
+	protected String result;
 	
 	public HttpServletRequest getRequest(){
 		ActionContext ctx = ActionContext.getContext();       
@@ -34,5 +36,13 @@ public class AppAction extends ActionSupport {
 		ApplicationContext springContext = WebApplicationContextUtils.getWebApplicationContext(request.getSession().getServletContext());
 		sqlSession = (SqlSessionTemplate)springContext.getBean("sqlSession");
 		return sqlSession;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
 	}
 }

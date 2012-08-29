@@ -1,4 +1,4 @@
-package com.xmw;
+package com.xmw.action;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -39,6 +39,12 @@ public class HelloWorld extends AppAction {
 		os.print("</body></html>");
 		os.flush();
 		os.close();
+	}
+	
+	public String hello()
+	{
+		result = "xieliang";
+		return SUCCESS;
 	}
 
 	public String getName() {

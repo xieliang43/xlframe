@@ -51,8 +51,11 @@
 	
 	<tx:advice id="txAdvice" transaction-manager="txManager">
 		<tx:attributes>
-			<tx:method name="get*" read-only="true"/>
-			<tx:method name="*"/>
+			<tx:method name="add*" rollback-for="java.lang.RuntionException" propagation="REQUIRED"/>
+			<tx:method name="del*" rollback-for="java.lang.RuntionException" propagation="REQUIRED"/>
+			<tx:method name="update*" rollback-for="java.lang.RuntionException" propagation="REQUIRED"/>
+			<tx:method name="find*"/>
+			<tx:method name="*" read-only="true"/>
   		</tx:attributes>
   	</tx:advice>
   	

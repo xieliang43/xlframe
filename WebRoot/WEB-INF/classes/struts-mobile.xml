@@ -7,7 +7,7 @@
 
     <package name="mobile" namespace="/mobile" extends="default">
 
-        <action name="*!*" method="{2}" class="com.xmw.{1}" />
+        <action name="*!*" method="{2}" class="com.xmw.action.{1}" />
 
     </package>
 </struts>

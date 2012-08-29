@@ -21,4 +21,5 @@
 	</package>
 
     <include file="struts-mobile.xml"/>
+    <include file="struts-web.xml"/>
 </struts>
