@@ -1,4 +1,4 @@
-package com.xmw.action;
+package com.xmw;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,7 +11,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AppAction extends ActionSupport {
+public class SuperAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
 	

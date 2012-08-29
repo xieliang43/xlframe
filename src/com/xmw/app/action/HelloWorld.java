@@ -1,4 +1,4 @@
-package com.xmw.action;
+package com.xmw.app.action;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,7 +8,9 @@ import javax.servlet.ServletOutputStream;
 
 import org.mybatis.spring.SqlSessionTemplate;
 
-public class HelloWorld extends AppAction {
+import com.xmw.SuperAction;
+
+public class HelloWorld extends SuperAction {
 	
 	private static final long serialVersionUID = 1L;
 	

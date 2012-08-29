@@ -4,10 +4,11 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-
-    <package name="mobile" namespace="/mobile" extends="default">
-
-        <action name="*!*" method="{2}" class="com.xmw.action.{1}" />
-
+    <package name="mobile" namespace="/m" extends="default">
+		<action name="*!*" method="{2}" class="com.xmw.app.action.{1}" />	
+    </package>
+    
+    <package name="mobileFrame" namespace="/mframe" extends="mobile">
+    	<action name="*!*" method="{2}" class="com.xmw.frame.action.{1}" />
     </package>
 </struts>

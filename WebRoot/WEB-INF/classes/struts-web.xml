@@ -7,10 +7,13 @@
 
     <package name="web" namespace="/" extends="default">
 
-        <action name="*-*" method="{2}" class="com.xmw.action.{1}">
+        <action name="*-*" method="{2}" class="com.xmw.app.action.{1}">
         	<result name="success">/app/web/{1}_{2}.jsp</result>
         </action>
 
     </package>
     
+	<package name="webFrame" namespace="/wframe" extends="web">
+	
+	</package>    
 </struts>
