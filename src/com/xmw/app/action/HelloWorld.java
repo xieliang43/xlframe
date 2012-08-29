@@ -45,7 +45,7 @@ public class HelloWorld extends SuperAction {
 	
 	public String hello()
 	{
-		result = "xieliang";
+		result = "谢亮";
 		return SUCCESS;
 	}
 
